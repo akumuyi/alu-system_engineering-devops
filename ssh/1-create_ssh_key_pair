@@ -4,11 +4,8 @@
 # Define the filename for the private key
 private_key_file="school"
 
-# Prompt user for passphrase
-read -sp "Enter passphrase for the private key: " passphrase
-
 # Create the RSA key pair
-ssh-keygen -t rsa -b 4096 -f "$private_key_file" -N "$passphrase"
+ssh-keygen -t rsa -b 4096 -f "$private_key_file" -N "betty"
 
 # Provide information to the user
 echo -e "\nRSA key pair created successfully."
