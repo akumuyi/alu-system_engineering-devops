@@ -2,5 +2,5 @@
 # This script connects to the server 5905-web-01 using SSH and the private key ~/.ssh/school
 
 # Using the ssh command with single-character flags
-ssh -i ~/.ssh/school ubuntu@54.234.219.0
+ssh -i ~/.ssh/school ubuntu@3.80.99.175
 
