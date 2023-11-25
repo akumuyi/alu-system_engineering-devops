@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Configures Nginx to redirect /redirect_me to another page with a "301 Moved Permanently" status.
+
+# Install Nginx (if not already installed)
+apt-get update
+apt-get install -y nginx
+
+# Create the directory for the redirection page
+mkdir -p /etc/nginx/html/redirect_me
+touch /etc/nginx/html/redirect_me/index.html
+echo "This is the redirected page" > /etc/nginx/html/redirect_me/index.html
+
+# Configure Nginx for redirection
+printf %s "server {
+    listen      80 default_server;
+    listen      [::]:80 default_server;
+    root        /etc/nginx/html;
+
+    location /redirect_me {
+        return 301 http://www.newtonians-trade.com;
+    }
+
+    location / {
+        index   index.html index.htm;
+    }
+}
+" > /etc/nginx/sites-available/default
+
+# Restart Nginx to apply changes
+service nginx restart
