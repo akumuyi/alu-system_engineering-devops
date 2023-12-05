@@ -7,3 +7,6 @@ rm -r /etc/nginx/sites-enabled
 # file  between /etc/nginx/sites-available and 
 # /etc/nginx/sites-enabled
 ln -s /etc/nginx/sites-available/default /etc/sites-enabled/
+
+# Restart Nginx
+sudo service nginx restart
