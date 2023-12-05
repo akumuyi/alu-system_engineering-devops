@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Remove previous default file from 
+# /etc/nginx/sites-enabled
+rm -r /etc/nginx/sites-enabled
+
+# Create a symbolink lineked default
+# file  between /etc/nginx/sites-available and 
+# /etc/nginx/sites-enabled
+ln -s /etc/nginx/sites-available/default /etc/sites-enabled/
