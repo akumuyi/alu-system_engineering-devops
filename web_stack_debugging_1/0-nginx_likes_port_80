@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Remove previous default file from 
 # /etc/nginx/sites-enabled
 rm -r /etc/nginx/sites-enabled
