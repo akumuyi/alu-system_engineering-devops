@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Enable the default Nginx site
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx stop
-netstat -anp | grep :80
+curl -i 0:80
