@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
+# Create a symbolink link
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
-curl -i localhost
-service nginx stop
+sudo service nginx restart
+curl -i http://localhost:80
