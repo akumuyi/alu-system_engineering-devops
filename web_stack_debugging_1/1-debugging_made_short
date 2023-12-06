@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Create a symbolink link
+# Configures an Nginx server to listen on port 80.
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx restart
-curl -i http://localhost:80
+service nginx start
+kill "$(pgrep 'nginx' | head -1)"
